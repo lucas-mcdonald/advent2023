@@ -1,5 +1,4 @@
 import {readFileSync} from 'fs';
-import { get } from 'http';
 
 const limits = {
     red: 12,
