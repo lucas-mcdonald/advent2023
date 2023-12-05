@@ -1,3 +1,4 @@
+const start = performance.now();
 import { readFileSync } from 'fs';
 
 // Read the input file and split it into lines
@@ -69,3 +70,6 @@ console.log(
   'Part 2: ',
   scratchCards.map((card) => card.copies).reduce((a, b) => a + b)
 );
+
+const end = performance.now();
+console.log('Execution time: ', end - start, 'ms');
