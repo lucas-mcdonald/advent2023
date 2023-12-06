@@ -36,4 +36,4 @@ console.log('Part 2:', Math.abs(Math.floor(newRoots[0]) - Math.floor(newRoots[1]
 const end = performance.now();
 console.log(`Runtime: ${end - start}ms`);
 
-// Runtime: 0.32424999999999926ms
+// Runtime: 0.32425ms

@@ -37,4 +37,4 @@ console.log('Part 2:', getRecordBreakers(newTime, newDistance).length);
 const end = performance.now();
 console.log(`Runtime: ${end - start}ms`);
 
-// Runtime: 148.952666ms
+// Runtime: 148.953ms
