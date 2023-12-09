@@ -25,9 +25,7 @@ const extrapolate = (sequence: number[]): number[] => {
 const runExtrapolation = (sequences: number[][]): number => {
     const nextValues: number[] = [];
     for (let i = 0; i < sequences.length; i++) {
-        let dx = getDx(sequences[i]);
         const extrapolated = extrapolate(sequences[i]);
-        // console.log(extrapolated);
         nextValues.push(extrapolated[extrapolated.length - 1]);
     }
     return nextValues.reduce((a, b) => a + b, 0);
