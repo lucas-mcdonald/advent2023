@@ -1,9 +1,9 @@
 {
-  "name": "dec2",
+  "name": "advent",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "^1.0.16"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
