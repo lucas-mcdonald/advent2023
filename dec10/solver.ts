@@ -59,40 +59,6 @@ class Point {
   }
 }
 
-const pipeMap = new Map<string, [number, number][]>([
-  ['|', [[1, 0]]],
-  ['-', [[0, 1]]],
-  [
-    'L',
-    [
-      [1, 0],
-      [0, 1],
-    ],
-  ],
-  [
-    'J',
-    [
-      [1, 0],
-      [0, -1],
-    ],
-  ],
-  [
-    '7',
-    [
-      [0, 1],
-      [1, 0],
-    ],
-  ],
-  [
-    'F',
-    [
-      [0, -1],
-      [1, 0],
-    ],
-  ],
-  ['.', []],
-]);
-
 const parseInput = (input: string) => {
   const lines = input.split('\n');
   const startingPoint: Point = new Point('', 0, 0);
@@ -155,13 +121,6 @@ const part1 = (input: string) => {
   return loop.length / 2;
 };
 
-// const shoestring = (points: Point[]) => {
-//   let area = 0;
-//   for (let i = 0; i < points.length; i++) {
-//     area += points[i].x * points[(i + 1) % points.length].y - points[(i + 1) % points.length].x * points[i].y;
-//   }
-//   return area / 2;
-// }
 const part2 = (input: string) => {
   const loop = buildLoop(input);
   const lines = input.split('\n');
