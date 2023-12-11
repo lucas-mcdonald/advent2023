@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import solver from './solver';
 
 let start, end;
-const input = readFileSync('dec10/example.txt', 'utf8');
+const input = readFileSync('dec10/input.txt', 'utf8');
 
 start = performance.now();
 const part1Result = solver.part1(input);

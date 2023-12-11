@@ -179,17 +179,12 @@ const part2 = (input: string) => {
   for (let i = 0; i < lines.length; i++) {
     let inside = false;
     let outputLine = [];
-    let lastEdgeIndex = 0;
     for (let j = 0; j < lines[i].length; j++) {
       if (loop.findIndex((point) => point.x === i && point.y === j) !== -1) {
-        if (
-          (!inside && ['|', 'J', '7'].includes(lines[i][j])) ||
-          (inside && ['|', 'L', 'F'].includes(lines[i][j]))
-        ) {
+        if (['|', '7', 'F'].includes(lines[i][j])) {
           inside = !inside;
         }
         outputLine.push(lines[i][j]);
-        lastEdgeIndex = j;
       } else {
         if (inside) {
           area++;
@@ -199,7 +194,6 @@ const part2 = (input: string) => {
         }
       }
     }
-    if (inside) area -= lines[i].length - lastEdgeIndex - 1;
     output.push(outputLine);
   }
   console.log(
@@ -215,5 +209,3 @@ export default {
   part1,
   part2,
 };
-
-// Wrong 1717, 1309, 1668, 1096, 913, 515, 455
